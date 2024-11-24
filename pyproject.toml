@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "fastkafkddd"
+version = "0.1.0"
+description = ""
+authors = ["vegetablepage <dany.titoff2016@yandex.ru>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.115.5"
+motor = "^3.6.0"
+uvicorn = {extras = ["all"], version = "^0.32.0"}
+ipython = "^8.29.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
