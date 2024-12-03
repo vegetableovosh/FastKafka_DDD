@@ -143,6 +143,14 @@ python-versions = ">=3.6"
 all = ["ruff (>=0.6.2)", "mypy (>=1.11.2)", "pytest (>=8.3.2)", "flake8 (>=7.1.1)"]
 
 [[package]]
+name = "iniconfig"
+version = "2.0.0"
+description = "brain-dead simple config-ini parsing"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "ipython"
 version = "8.29.0"
 description = "IPython: Productive Interactive Computing"
@@ -226,6 +234,14 @@ test = ["aiohttp (>=3.8.7)", "cffi (>=1.17.0rc1)", "mockupdb", "pymongo[encrypti
 zstd = ["pymongo[zstd] (>=4.5,<5)"]
 
 [[package]]
+name = "packaging"
+version = "24.2"
+description = "Core utilities for Python packages"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
 name = "parso"
 version = "0.8.4"
 description = "A Python Parser"
@@ -247,6 +263,18 @@ python-versions = "*"
 
 [package.dependencies]
 ptyprocess = ">=0.5"
+
+[[package]]
+name = "pluggy"
+version = "1.5.0"
+description = "plugin and hook calling mechanisms for python"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+dev = ["pre-commit", "tox"]
+testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
 name = "prompt-toolkit"
@@ -342,6 +370,25 @@ test = ["pytest-asyncio (>=0.24.0)", "pytest (>=8.2)"]
 zstd = ["zstandard"]
 
 [[package]]
+name = "pytest"
+version = "8.3.3"
+description = "pytest: simple powerful testing with Python"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+colorama = {version = "*", markers = "sys_platform == \"win32\""}
+exceptiongroup = {version = ">=1.0.0rc8", markers = "python_version < \"3.11\""}
+iniconfig = "*"
+packaging = "*"
+pluggy = ">=1.5,<2"
+tomli = {version = ">=1", markers = "python_version < \"3.11\""}
+
+[package.extras]
+dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments (>=2.7.2)", "requests", "setuptools", "xmlschema"]
+
+[[package]]
 name = "six"
 version = "1.16.0"
 description = "Python 2 and 3 compatibility utilities"
@@ -386,6 +433,14 @@ anyio = ">=3.4.0,<5"
 
 [package.extras]
 full = ["httpx (>=0.22.0)", "itsdangerous", "jinja2", "python-multipart (>=0.0.7)", "pyyaml"]
+
+[[package]]
+name = "tomli"
+version = "2.1.0"
+description = "A lil' TOML parser"
+category = "main"
+optional = false
+python-versions = ">=3.8"
 
 [[package]]
 name = "traitlets"
@@ -434,7 +489,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "39f1f383d11e0cfe6a3d7cc09ffedbb23ed6eb5eee7b0f448d2cceaa6dfff3ac"
+content-hash = "62acd7a1b8462757e8493ae68835d4580d6c6f34ce32c873ee66f51d79c98b98"
 
 [metadata.files]
 annotated-types = []
@@ -449,12 +504,15 @@ executing = []
 fastapi = []
 h11 = []
 idna = []
+iniconfig = []
 ipython = []
 jedi = []
 matplotlib-inline = []
 motor = []
+packaging = []
 parso = []
 pexpect = []
+pluggy = []
 prompt-toolkit = []
 ptyprocess = []
 pure-eval = []
@@ -462,10 +520,12 @@ pydantic = []
 pydantic-core = []
 pygments = []
 pymongo = []
+pytest = []
 six = []
 sniffio = []
 stack-data = []
 starlette = []
+tomli = []
 traitlets = []
 typing-extensions = []
 uvicorn = []
